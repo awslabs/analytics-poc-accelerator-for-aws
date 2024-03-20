@@ -95,7 +95,7 @@ You can pick and choose different parts of the Analytics POC stack as well by us
 For example, to deploy an EMR on EC2 stack instead of EMR Serverless you can use the following command:
 
 ```bash
-cdk deploy --all --outputs-file out.json --context emrdeployments=serverless
+cdk deploy --all --outputs-file out.json --context emrdeployments=ec2
 ```
 
 > **Note**: In this PoC, we grant the runtime roles associated with the different environments access to the data. With the exception of Athena, the user does not interact directly with the S3 data bucket.
