@@ -26,14 +26,12 @@ This project creates an easy to use starter configuration for Analytics services
 - An S3 Bucket to store data
 - A dataset from the NOAA public dataset
 - Glue Data Catalog configuration with Database and Table for the public dataset
-- Lake Formation Permissions configuration to secure Glue Data Catalog
 - An Athena Workgroup
 - An EMR Serverless Application
 - An EMR on EC2 Cluster
 - An EMR on EKS Virtual Cluster
 - An EMR Studio Workspace
 - System and IAM Users and Roles to secure the infrastructure
-- ~A static website that enables you to launch EMR Studio and the AWS Web Console~
 
 ## Context / Vision
 
