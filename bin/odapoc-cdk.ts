@@ -33,7 +33,7 @@ const poc = new AnalyticsPOCStack(app, "AnalyticsPOCStack", {
   createEMRCluster: emrEnvironments.includes("ec2"),
   createEMRApplication: emrEnvironments.includes("serverless"),
   createEMROnEks: emrEnvironments.includes("eks"),
-  createEMRStudio: false,
+  createEMRStudio: true,
 
   createAthenaSQL: false,
   createAthenaSpark: false,
