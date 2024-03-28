@@ -11,7 +11,7 @@ import {
 } from "aws-cdk-lib/aws-ec2";
 import { CfnVirtualCluster } from "aws-cdk-lib/aws-emrcontainers";
 import { ManagedPolicy, PolicyDocument, PolicyStatement } from "aws-cdk-lib/aws-iam";
-import { processing } from "aws-dsf";
+import { processing } from "@cdklabs/aws-data-solutions-framework";
 import { Construct } from "constructs";
 
 export interface IVirtualCluster extends IResource, iam.IGrantable {
