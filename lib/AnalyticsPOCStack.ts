@@ -12,7 +12,7 @@ import { LandingPage } from "./ui/landing-page";
 import { AthenaSpark } from "./athena/spark";
 import { LakeFormation } from "./catalog/lakeFormation";
 import { SampleStreamingApp } from "./samples/sampleStreamingApp";
-import { EmrRuntimeVersion } from "aws-dsf/lib/processing";
+import { processing } from "@cdklabs/aws-data-solutions-framework";
 import { SampleDataImporterApp } from "./samples/sampleDataImporter";
 import { VirtualCluster } from "./emr/containers";
 
@@ -101,7 +101,7 @@ export class AnalyticsPOCStack extends cdk.Stack {
           withStudioAccess: true,
         },
         artifactsBucket: props.bucket,
-        releaseLabel: "emr-6.15.0" as EmrRuntimeVersion,
+        releaseLabel: "emr-6.15.0" as processing.EmrRuntimeVersion,
       });
       if (this.emr.jobRole) {
         new cdk.CfnOutput(this, "emrClusterJobRoleArn", {
@@ -122,7 +122,7 @@ export class AnalyticsPOCStack extends cdk.Stack {
     if (props.createEMRApplication) {
       this.emrApplication = new Application(this, "EMRServerlessApp", {
         vpc: props.vpc,
-        releaseLabel: "emr-6.15.0" as EmrRuntimeVersion,
+        releaseLabel: "emr-6.15.0" as processing.EmrRuntimeVersion,
       });
       new cdk.CfnOutput(this, "emrServerlessJobRoleArn", {
         value: this.emrApplication.jobRole.roleArn,

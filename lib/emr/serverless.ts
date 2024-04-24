@@ -9,7 +9,7 @@ import {
   SubnetSelection,
 } from "aws-cdk-lib/aws-ec2";
 import { CfnApplication } from "aws-cdk-lib/aws-emrserverless";
-import { processing } from "aws-dsf";
+import { processing } from "@cdklabs/aws-data-solutions-framework";
 import { Construct } from "constructs";
 import * as semver from "semver";
 
